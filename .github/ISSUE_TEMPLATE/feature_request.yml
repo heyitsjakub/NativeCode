@@ -1,0 +1,65 @@
+name: ✨ Feature Request
+description: Suggest a new feature or improvement for NativeCode
+title: "[Feature] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an idea for NativeCode! 💡
+        
+        The best features come from real users with real needs. Please describe your idea below.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched [existing issues](https://github.com/heyitsjakub/NativeCode/issues) and didn't find a duplicate request
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the problem or limitation you're facing. What are you trying to do?
+      placeholder: "I want to use DeepSeek-Coder for my coding tasks but NativeCode currently only supports Qwen3 models..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What would you like NativeCode to do? Be as specific as you can.
+      placeholder: "Add support for DeepSeek-Coder models in the Models tab, similar to how Qwen3 is integrated."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you considered other ways to solve this problem? (other tools, workarounds, etc.)
+      placeholder: "I tried running DeepSeek-Coder via LM Studio as a remote backend, but it doesn't integrate as smoothly..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this to you?
+      options:
+        - Nice to have
+        - Would significantly improve my workflow
+        - Critical — I can't use NativeCode without this
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Screenshots, mockups, links to similar features in other tools, or anything else that would help.
+    validations:
+      required: false
