@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📧 Email the developer
+    url: mailto:info@jakubhecht.sk
+    about: For private inquiries or partnership opportunities, email Jakub directly.
+  - name: 🌐 Visit NativeCode website
+    url: https://nativecode.jakubhecht.sk
+    about: Download the latest version, read documentation, and view release notes.
