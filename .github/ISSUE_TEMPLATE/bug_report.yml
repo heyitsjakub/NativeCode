@@ -1,0 +1,143 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior in NativeCode
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! 🙏
+        
+        Please fill out the form below as completely as possible. The more details you provide, the faster I can fix the issue.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      description: Please confirm the following before opening the issue.
+      options:
+        - label: I'm running the latest version of NativeCode (1.2.1)
+          required: true
+        - label: I searched [existing issues](https://github.com/heyitsjakub/NativeCode/issues) and didn't find a duplicate
+          required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: "When I try to download a model, the progress bar gets stuck at 50%..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: How can I reproduce this bug on my machine?
+      placeholder: |
+        1. Open NativeCode
+        2. Go to Settings → Models
+        3. Click Download on Qwen3-14B 6-bit
+        4. Wait for progress to reach 50%
+        5. Progress bar freezes
+      value: |
+        1. 
+        2. 
+        3. 
+        4. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen?
+      placeholder: "The download should complete to 100% and the model should appear as available."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened?
+      placeholder: "The progress bar stops moving at 50% and the app becomes unresponsive."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: macos_version
+    attributes:
+      label: macOS version
+      description: Which version of macOS are you running?
+      options:
+        - macOS 14 (Sonoma)
+        - macOS 15 (Sequoia)
+        - macOS 16 (Tahoe)
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mac_model
+    attributes:
+      label: Mac model
+      description: Which Mac are you using?
+      options:
+        - Apple Silicon — M1 / M1 Pro / M1 Max / M1 Ultra
+        - Apple Silicon — M2 / M2 Pro / M2 Max / M2 Ultra
+        - Apple Silicon — M3 / M3 Pro / M3 Max / M3 Ultra
+        - Apple Silicon — M4 / M4 Pro / M4 Max
+        - Apple Silicon — M5 / M5 Pro / M5 Max
+        - Intel Mac
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: input
+    id: ram
+    attributes:
+      label: RAM
+      description: How much RAM does your Mac have?
+      placeholder: "e.g. 16 GB, 32 GB, 64 GB"
+    validations:
+      required: true
+
+  - type: input
+    id: ai_model
+    attributes:
+      label: AI model in use
+      description: Which AI model were you using when the bug occurred (if applicable)?
+      placeholder: "e.g. Qwen3-8B 4-bit, Qwen3-14B 6-bit, Qwen3-VL 8B, none"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console logs (optional but very helpful)
+      description: |
+        Open **Console.app**, search for "NativeCode", reproduce the bug, then copy any error messages here.
+        Tip: filter by `process:NativeCode` for cleaner output.
+      placeholder: "Paste console logs here..."
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, drag and drop screenshots or screen recordings to help illustrate the issue.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else I should know? (custom Python setup, other AI tools running, network config, etc.)
+    validations:
+      required: false
