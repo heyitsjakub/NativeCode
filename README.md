@@ -10,7 +10,7 @@
 
 [![macOS](https://img.shields.io/badge/macOS-14.0+-000000?style=flat&logo=apple&logoColor=white)](https://nativecode.jakubhecht.sk)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-recommended-blue?style=flat&logo=apple&logoColor=white)](https://nativecode.jakubhecht.sk)
-[![Version](https://img.shields.io/badge/version-1.3-success?style=flat)](https://nativecode.jakubhecht.sk)
+[![Version](https://img.shields.io/badge/version-1.3.1-success?style=flat)](https://nativecode.jakubhecht.sk)
 [![Price](https://img.shields.io/badge/price-free-brightgreen?style=flat)](https://nativecode.jakubhecht.sk)
 
 [**Website**](https://nativecode.jakubhecht.sk) · [**Download**](https://nativecode.jakubhecht.sk) · [**Report a bug**](https://github.com/heyitsjakub/NativeCode/issues/new/choose) · [**Request a feature**](https://github.com/heyitsjakub/NativeCode/issues/new/choose)
@@ -75,15 +75,15 @@ Full installation guide: [nativecode.jakubhecht.sk/#install](https://nativecode.
 - 32 GB RAM recommended for larger models
 - Around 5-15 GB free disk space, depending on selected model
 
-## What's new in 1.3
+## What's new in 1.3.1
 
-- Integrated bottom terminal panel with `Command-J`
-- Visible agent task lists for multi-step work
-- More reliable task-list tool handling for small local models
-- Cleaner terminal controls and animations
-- Chat placeholder now hints that `@` can mention files
+- Remote OpenAI-compatible server discovery now works across the local network, not only with localhost.
+- Server scanning is much faster and prioritizes common model-server ports such as LM Studio, rapid-mlx, Ollama, and llama.cpp.
+- Open editor tabs now refresh after the agent edits the same file with `write_file` or `edit_file`.
+- NativeCode now installs built-in build/test skills and tells agents to inspect them through the terminal when needed.
+- Agents are now prompted to verify their own work after code changes with the relevant build, test, lint, or typecheck command.
 
-See [CHANGELOG.md](CHANGELOG.md) for full version history.
+See [RELEASE_NOTES.md](RELEASE_NOTES.md) for full version details.
 
 ## FAQ
 
