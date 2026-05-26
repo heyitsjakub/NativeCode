@@ -41,6 +41,9 @@ NativeCode is a native macOS coding IDE with a built-in AI agent that can read, 
 | Native SwiftUI           | ✅            | ❌ Electron    | ❌ Electron    | ❌ VS Code ext  |
 | Apple Silicon optimized  | ✅ MLX        | ❌             | ⚠️ Partial      | ⚠️ Partial       |
 | 100% local option        | ✅            | ❌             | ✅             | ✅              |
+| Built-in skills system   | ✅            | ❌             | ❌             | ❌              |
+| LAN model discovery      | ✅            | ❌             | ❌             | ❌              |
+| Self-verifying agent     | ✅            | ⚠️              | ✅             | ❌              |
 | Price                    | **Free**      | $20/mo         | $79+           | Free            |
 
 NativeCode is the only IDE that combines a **native SwiftUI interface** with **MLX-powered local inference** — no Electron, no telemetry, no subscriptions.
@@ -57,6 +60,28 @@ NativeCode is the only IDE that combines a **native SwiftUI interface** with **M
 - LM Studio
 - Ollama
 - Any server exposing an OpenAI-compatible endpoint
+
+## Built-in skills 🧠
+
+NativeCode ships with a skills system that gives the AI agent expert knowledge about your project type — loaded on-demand to keep your local model's context window small.
+
+**Included skills:**
+- Swift / SwiftUI best practices
+- Xcode build configuration
+- Python project conventions
+- Verification workflow (build, test, lint, typecheck)
+
+**Custom skills:** Add your own markdown files to `~/Library/Application Support/NativeCode/skills/` to teach the agent about your codebase, team conventions, or specific frameworks.
+
+## Network model discovery 🌐
+
+Run your AI model on a beefier machine and use NativeCode from your laptop. NativeCode automatically discovers OpenAI-compatible servers on your local network — perfect for setups like:
+
+- LM Studio on a Mac Studio in your office
+- Ollama on a Linux GPU rig in your basement
+- vLLM on a remote workstation
+
+NativeCode scans common model-server ports (LM Studio, rapid-mlx, Ollama, llama.cpp) and connects to whichever is available — no manual IP configuration required.
 
 ## Quick start
 
