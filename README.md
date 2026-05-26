@@ -15,8 +15,7 @@
 
 [**Website**](https://nativecode.jakubhecht.sk) · [**Download**](https://nativecode.jakubhecht.sk) · [**Report a bug**](https://github.com/heyitsjakub/NativeCode/issues/new/choose) · [**Request a feature**](https://github.com/heyitsjakub/NativeCode/issues/new/choose)
 
-<!-- TODO: Add hero screenshot here -->
-<!-- <img src="https://nativecode.jakubhecht.sk/assets/screenshot-hero.png" alt="NativeCode screenshot" width="800"> -->
+<img src="https://nativecode.jakubhecht.sk/assets/screenshot.png" alt="NativeCode screenshot" width="800">
 
 </div>
 
