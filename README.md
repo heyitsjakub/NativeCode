@@ -10,12 +10,12 @@
 
 [![macOS](https://img.shields.io/badge/macOS-14.0+-000000?style=flat&logo=apple&logoColor=white)](https://nativecode.jakubhecht.sk)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-recommended-blue?style=flat&logo=apple&logoColor=white)](https://nativecode.jakubhecht.sk)
-[![Version](https://img.shields.io/badge/version-1.3.2-success?style=flat)](https://nativecode.jakubhecht.sk)
+[![Version](https://img.shields.io/badge/version-1.3.3-success?style=flat)](https://nativecode.jakubhecht.sk)
 [![Price](https://img.shields.io/badge/price-free-brightgreen?style=flat)](https://nativecode.jakubhecht.sk)
 
 [**Website**](https://nativecode.jakubhecht.sk) · [**Download**](https://nativecode.jakubhecht.sk) · [**Report a bug**](https://github.com/heyitsjakub/NativeCode/issues/new/choose) · [**Request a feature**](https://github.com/heyitsjakub/NativeCode/issues/new/choose)
 
-<img src="https://nativecode.jakubhecht.sk/assets/screenshot.png?v=1.3.2-2" alt="NativeCode screenshot" width="800">
+<img src="https://nativecode.jakubhecht.sk/assets/screenshot.png?v=1.3.3" alt="NativeCode screenshot" width="800">
 
 </div>
 
@@ -75,13 +75,13 @@ Full installation guide: [nativecode.jakubhecht.sk/#install](https://nativecode.
 - 32 GB RAM recommended for larger models
 - Around 5-15 GB free disk space, depending on selected model
 
-## What's new in 1.3.2
+## What's new in 1.3.3
 
-- **Plan Mode** — toggle with ⇧⇥ and let the agent investigate the project and write a structured plan to `nativecode-plan.md`. Approve with **Yes** / **Yes, but…** / **No** before any code changes happen.
-- **Web search and URL fetch tools** — the agent can now look up current docs, library versions, and external references via DuckDuckGo without any API key.
-- **Smarter agent loop** — per-path read cap stops the model from looping on the same file, paginated reads return more content per chunk, and Hermes-style XML tool calls emitted by Qwen3-MoE variants are now recovered instead of crashing the run silently.
-- **Live auto-scroll during tool calls** — the chat now follows tool-call cards and result streaming, not only assistant prose and thinking blocks.
-- **Better fallbacks** — when the model returns an empty bubble or stalls before writing a plan, a clear UI hint tells you what to do next instead of leaving the viewport blank.
+- **Enforced self-review after larger changes** — after a new file, full rewrite, or multi-line edit, the agent must re-read and verify the changed file before it can finish. Enforced in the agent loop, not just asked for in the prompt.
+- **Recovery from failed edits** — when `edit_file` keeps failing to match on a multi-line block, the agent is forced to rewrite the whole file with `write_file` instead of getting stuck and leaving the file half-broken.
+- **Reliable reply language** — the app detects the language you write in and instructs the model to answer in it, so writing in English gets an English answer.
+- **Markdown tables and headings in chat** — GFM tables and `#` headings now render properly instead of showing raw `| a | b |` and `## Title`.
+- **Answers hidden in the reasoning stream are recovered** — if a model routes its whole reply into thinking and leaves the visible content empty, the chat now shows that answer instead of "no output".
 
 See [RELEASE_NOTES.md](RELEASE_NOTES.md) for full version details.
 
