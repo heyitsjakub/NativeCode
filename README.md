@@ -4,20 +4,59 @@
 
 # NativeCode
 
-### The first truly native AI coding IDE for Mac
+### The first truly native AI coding IDE for Mac & Windows
 
-**SwiftUI. MLX. 100% local. Built for Apple Silicon.**
+**SwiftUI. MLX. 100% local. Built for Apple Silicon and Windows.**
 
 [![macOS](https://img.shields.io/badge/macOS-14.0+-000000?style=flat&logo=apple&logoColor=white)](https://nativecode.jakubhecht.sk)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-recommended-blue?style=flat&logo=apple&logoColor=white)](https://nativecode.jakubhecht.sk)
 [![Version](https://img.shields.io/badge/version-1.3.3-success?style=flat)](https://nativecode.jakubhecht.sk)
 [![Price](https://img.shields.io/badge/price-free-brightgreen?style=flat)](https://nativecode.jakubhecht.sk)
+[![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat&logo=windows&logoColor=white)](#-nativecode-for-windows--new-beta)
+[![Windows beta](https://img.shields.io/badge/Windows%20beta-NEW-orange?style=flat)](#-nativecode-for-windows--new-beta)
 
 [**Website**](https://nativecode.jakubhecht.sk) · [**Download**](https://nativecode.jakubhecht.sk) · [**Report a bug**](https://github.com/heyitsjakub/NativeCode/issues/new/choose) · [**Request a feature**](https://github.com/heyitsjakub/NativeCode/issues/new/choose)
 
 <img src="https://nativecode.jakubhecht.sk/assets/screenshot.png?v=1.3.3" alt="NativeCode screenshot" width="800">
 
 </div>
+
+---
+
+## 🪟 NativeCode for Windows — NEW (Beta)
+
+**NativeCode now runs on Windows too.** A ground-up native port built with **WinUI 3** (Windows App SDK) — not Electron, not a web wrapper — bringing the same agentic coding experience to Windows 10 and 11.
+
+<div align="center">
+<img src="assets/screenshot-windows.png" alt="NativeCode for Windows screenshot" width="800">
+</div>
+
+
+- 🪟 **Native WinUI 3 app** — fluent, dark-themed, self-contained (no .NET install required)
+- 🧠 **Local and remote models** — runs local models via **Ollama**, or any OpenAI-compatible server (LM Studio, remote Ollama)
+- 🔒 **Private by default** — your project stays on your PC when using local models
+- 📝 **Monaco editor** — same VS Code-style editing, in a WebView2 host
+- 🛠️ **Agentic tools** — file read/edit/search, shell commands, visible task lists, plan mode
+- 💻 **Integrated terminal** — bottom terminal panel (`Ctrl-J`) backed by a real ConPTY session
+- 🖼️ **Vision support** — paste images into chat when the model supports it
+- 🎛️ **GPU offload control, network model discovery, one-click Ollama install**
+- 🌍 **English & Slovak** UI
+
+### Quick start (Windows)
+
+1. Download `NativeCode-1.0.0-beta-setup.exe` from the [releases](https://github.com/heyitsjakub/NativeCode/releases)
+2. Run it — it's a **per-user install**, no admin rights needed. (The beta isn't code-signed yet, so Windows SmartScreen may warn — click **More info → Run anyway**.)
+3. Install **Ollama** when prompted (one click) to run models locally, or point the app at a remote OpenAI-compatible server
+4. Open a project folder and start coding with your AI agent
+
+### System requirements (Windows)
+
+- Windows 10 (1809+) or Windows 11, 64-bit (x64)
+- 16 GB RAM minimum, 32 GB recommended for larger models
+- [Ollama](https://ollama.com) for local models (installable from inside the app)
+- Around 5–15 GB free disk space, depending on the selected model
+
+> The Windows build is in **beta** — feedback and bug reports are very welcome via the [issue tracker](https://github.com/heyitsjakub/NativeCode/issues/new/choose).
 
 ---
 
@@ -94,7 +133,7 @@ NativeCode is a true native macOS app built with SwiftUI, not an Electron wrappe
 MLX is Apple's native ML framework, optimized for Apple Silicon. It provides better performance and lower memory usage than cross-platform alternatives on Mac.
 
 **What about Windows or Linux?**
-NativeCode is Mac-only by design — that's the only way to be truly native.
+A native **Windows** version is now available in beta — a ground-up WinUI 3 port that runs local models via Ollama. See [NativeCode for Windows](#-nativecode-for-windows--new-beta) above. Linux is not planned. On macOS the app stays native SwiftUI + MLX; the Windows build is its own native port (WinUI 3 + Ollama), not a cross-platform wrapper.
 
 **Is my code sent anywhere?**
 Not when using local models. NativeCode has zero telemetry by default. You can verify this using a firewall like Little Snitch or Lulu.
@@ -144,7 +183,7 @@ NativeCode is free to use for personal and commercial work. The source code is c
 
 <div align="center">
 
-**Built in Slovakia · Made for Mac**
+**Built in Slovakia · Made for Mac & Windows**
 
 ⭐ If you like NativeCode, please star this repo to support development.
 
