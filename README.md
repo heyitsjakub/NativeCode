@@ -62,12 +62,12 @@
 
 ## What is NativeCode?
 
-NativeCode is a native macOS coding IDE with a built-in AI agent that can read, edit, search, and run approved commands across your project. Designed for local-first coding with Apple Silicon and MLX.
+NativeCode is a native coding IDE with a built-in AI agent that can read, edit, search, and run approved commands across your project. It's built for local-first coding — natively on **macOS** (SwiftUI + MLX on Apple Silicon) and now on **Windows** (WinUI 3 + Ollama). The points below describe the macOS app; see [NativeCode for Windows](#-nativecode-for-windows--new-beta) for the Windows port.
 
 - 🍎 **Native SwiftUI app** — not Electron, not a web wrapper
 - ⚡ **Powered by MLX** — Apple Silicon optimized local inference
 - 🧠 **Local and remote models** — works with local Rapid-MLX models and OpenAI-compatible servers
-- 🔒 **Private by default** — your project stays on your Mac when using local models
+- 🔒 **Private by default** — your project stays on your machine when using local models
 - 📝 **Monaco editor** — familiar VS Code-style editing
 - 🛠️ **Agentic tools** — file reading, editing, search, shell commands, and visible task lists
 - 💻 **Integrated terminal** — bottom terminal panel with `Command-J`
@@ -77,8 +77,10 @@ NativeCode is a native macOS coding IDE with a built-in AI agent that can read, 
 
 |                          | NativeCode    | Cursor         | Bodega One     | Continue.dev    |
 | ------------------------ | ------------- | -------------- | -------------- | --------------- |
-| Native SwiftUI           | ✅            | ❌ Electron    | ❌ Electron    | ❌ VS Code ext  |
-| Apple Silicon optimized  | ✅ MLX        | ❌             | ⚠️ Partial      | ⚠️ Partial       |
+| Native SwiftUI (macOS)   | ✅            | ❌ Electron    | ❌ Electron    | ❌ VS Code ext  |
+| Native WinUI 3 (Windows) | ✅            | ❌ Electron    | ❌ Electron    | ❌ VS Code ext  |
+| Apple Silicon optimized  | ✅ MLX        | ❌             | ⚠️ via Ollama   | ⚠️ via Ollama    |
+| Windows GPU acceleration | ✅ + offload control | ❌      | ⚠️ via Ollama   | ⚠️ via Ollama    |
 | 100% local option        | ✅            | ❌             | ✅             | ✅              |
 | Price                    | **Free**      | $20/mo         | $79+           | Free            |
 
@@ -97,7 +99,7 @@ NativeCode is the only IDE that combines a **native SwiftUI interface** with **M
 - Ollama
 - Any server exposing an OpenAI-compatible endpoint
 
-## Quick start
+## Quick start (macOS)
 
 1. Download `NativeCode.dmg` from [nativecode.jakubhecht.sk](https://nativecode.jakubhecht.sk)
 2. Drag NativeCode to your Applications folder
@@ -106,7 +108,7 @@ NativeCode is the only IDE that combines a **native SwiftUI interface** with **M
 
 Full installation guide: [nativecode.jakubhecht.sk/#install](https://nativecode.jakubhecht.sk/#install)
 
-## System requirements
+## System requirements (macOS)
 
 - macOS 14.0 or later
 - Apple Silicon Mac recommended
@@ -114,7 +116,18 @@ Full installation guide: [nativecode.jakubhecht.sk/#install](https://nativecode.
 - 32 GB RAM recommended for larger models
 - Around 5-15 GB free disk space, depending on selected model
 
-## What's new in 1.3.3
+## What's new on Windows (1.0.0 beta)
+
+First public Windows release — a ground-up native **WinUI 3** port of NativeCode:
+
+- **Native WinUI 3 app** — fluent dark UI, self-contained (no .NET runtime needed)
+- **Local models via Ollama** — one-click Ollama install, model pull/manage, and network discovery of remote servers
+- **Full agent loop** — file read/edit/search, shell commands, task lists, and plan mode with approval
+- **Monaco editor + integrated terminal** — VS Code-style editing (WebView2) and a real ConPTY terminal (`Ctrl-J`)
+- **GPU offload control** — choose how many model layers run on the GPU, or leave it on Auto
+- **English & Slovak** interface
+
+## What's new in 1.3.3 (macOS)
 
 - **Enforced self-review after larger changes** — after a new file, full rewrite, or multi-line edit, the agent must re-read and verify the changed file before it can finish. Enforced in the agent loop, not just asked for in the prompt.
 - **Recovery from failed edits** — when `edit_file` keeps failing to match on a multi-line block, the agent is forced to rewrite the whole file with `write_file` instead of getting stuck and leaving the file half-broken.
@@ -127,7 +140,7 @@ See [RELEASE_NOTES.md](RELEASE_NOTES.md) for full version details.
 ## FAQ
 
 **How is this different from Cursor?**
-NativeCode is a true native macOS app built with SwiftUI, not an Electron wrapper. It uses significantly less memory and integrates directly with Apple Silicon via MLX for fast local inference.
+NativeCode is a true native app — SwiftUI on macOS, WinUI 3 on Windows — not an Electron wrapper. It uses significantly less memory; on macOS it integrates directly with Apple Silicon via MLX, and on Windows it runs models locally through Ollama.
 
 **Why MLX and not llama.cpp or Ollama?**
 MLX is Apple's native ML framework, optimized for Apple Silicon. It provides better performance and lower memory usage than cross-platform alternatives on Mac.
@@ -136,7 +149,7 @@ MLX is Apple's native ML framework, optimized for Apple Silicon. It provides bet
 A native **Windows** version is now available in beta — a ground-up WinUI 3 port that runs local models via Ollama. See [NativeCode for Windows](#-nativecode-for-windows--new-beta) above. Linux is not planned. On macOS the app stays native SwiftUI + MLX; the Windows build is its own native port (WinUI 3 + Ollama), not a cross-platform wrapper.
 
 **Is my code sent anywhere?**
-Not when using local models. NativeCode has zero telemetry by default. You can verify this using a firewall like Little Snitch or Lulu.
+Not when using local models. NativeCode has zero telemetry by default. You can verify this with a firewall — Little Snitch or Lulu on macOS, or Windows Defender Firewall / GlassWire on Windows.
 
 **Will the source code be open-sourced?**
 Not currently planned. NativeCode is a single-developer commercial product.
@@ -152,11 +165,11 @@ Found a bug? Please open an issue using the bug report template:
 
 Before opening a new issue, please include:
 
-- NativeCode version
-- macOS version
-- Mac model and memory
+- NativeCode version and platform (macOS or Windows)
+- OS version (macOS or Windows build)
+- Machine specs — Mac model, or CPU/GPU/RAM on Windows
 - Selected AI model
-- Whether you are using local Rapid-MLX or a remote OpenAI-compatible server
+- Backend — local Rapid-MLX (macOS), local Ollama (Windows), or a remote OpenAI-compatible server
 - Steps to reproduce the issue
 
 ## Requesting a feature
