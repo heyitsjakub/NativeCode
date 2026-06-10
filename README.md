@@ -28,7 +28,7 @@
 **NativeCode now runs on Windows too.** A ground-up native port built with **WinUI 3** (Windows App SDK) — not Electron, not a web wrapper — bringing the same agentic coding experience to Windows 10 and 11.
 
 <div align="center">
-<img src="assets/screenshot-windows.png" alt="NativeCode for Windows screenshot" width="800">
+<img src="https://nativecode.jakubhecht.sk/assets/screenshot-windows.png?v=1.0.1" alt="NativeCode for Windows screenshot" width="800">
 </div>
 
 
