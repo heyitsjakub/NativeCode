@@ -10,14 +10,14 @@
 
 [![macOS](https://img.shields.io/badge/macOS-14.0+-000000?style=flat&logo=apple&logoColor=white)](https://nativecode.jakubhecht.sk)
 [![Apple Silicon](https://img.shields.io/badge/Apple%20Silicon-recommended-blue?style=flat&logo=apple&logoColor=white)](https://nativecode.jakubhecht.sk)
-[![Version](https://img.shields.io/badge/version-1.3.4-success?style=flat)](https://nativecode.jakubhecht.sk)
+[![Version](https://img.shields.io/badge/version-1.3.5-success?style=flat)](https://nativecode.jakubhecht.sk)
 [![Price](https://img.shields.io/badge/price-free-brightgreen?style=flat)](https://nativecode.jakubhecht.sk)
 [![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat&logo=windows&logoColor=white)](#-nativecode-for-windows--new-beta)
 [![Windows beta](https://img.shields.io/badge/Windows%20beta-NEW-orange?style=flat)](#-nativecode-for-windows--new-beta)
 
 [**Website**](https://nativecode.jakubhecht.sk) · [**Download**](https://nativecode.jakubhecht.sk) · [**Report a bug**](https://github.com/heyitsjakub/NativeCode/issues/new/choose) · [**Request a feature**](https://github.com/heyitsjakub/NativeCode/issues/new/choose)
 
-<img src="https://nativecode.jakubhecht.sk/assets/screenshot.png?v=1.3.4" alt="NativeCode screenshot" width="800">
+<img src="https://nativecode.jakubhecht.sk/assets/screenshot.png?v=1.3.5" alt="NativeCode screenshot" width="800">
 
 </div>
 
@@ -134,9 +134,9 @@ Full installation guide: [nativecode.jakubhecht.sk/#install](https://nativecode.
 
 - **Bug fixes** — this release fixes bugs and improves stability. The Windows build remains in **beta**.
 
-## What's new in 1.3.4 (macOS)
+## What's new in 1.3.5 (macOS)
 
-- **Bug fixes** — this release fixes bugs and improves stability.
+- **Added chat history** — your conversations are now saved automatically. A new **History** button sits right next to **New chat**, so you can browse and reopen any of your past chats.
 
 ## FAQ
 
