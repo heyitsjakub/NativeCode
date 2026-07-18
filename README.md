@@ -30,6 +30,16 @@ It supports local AI models and OpenAI-compatible remote servers. When using loc
 
 More information, downloads, documentation, and release details are available on the [NativeCode website](https://nativecode.jakubhecht.sk).
 
+## NativeCode 2.0
+
+**NativeCode 2.0 is currently in development.**
+
+The next generation of NativeCode is moving to a shared web wrapper inside the desktop app, designed to support multiple platforms and make future development easier.
+
+More details will be announced on the [NativeCode website](https://nativecode.jakubhecht.sk/#nativecode-2).
+
+Current downloads remain on version 1.x.
+
 ## Report a bug
 
 Found a problem with NativeCode?
