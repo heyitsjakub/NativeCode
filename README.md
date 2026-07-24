@@ -4,19 +4,30 @@
 
 # NativeCode
 
-### A native AI coding IDE for macOS and Windows
+### NativeCode 2.0 Beta is now available for macOS 🚀
 
 **SwiftUI. WinUI 3. Local AI. Built for Apple Silicon and Windows.**
 
-[![macOS](https://img.shields.io/badge/macOS-14.0+-000000?style=flat\&logo=apple\&logoColor=white)](https://nativecode.jakubhecht.sk)
-[![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat\&logo=windows\&logoColor=white)](https://nativecode.jakubhecht.sk)
+[![macOS](https://img.shields.io/badge/macOS-14.0+-000000?style=flat&logo=apple&logoColor=white)](https://nativecode.jakubhecht.sk)
+[![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?style=flat&logo=windows&logoColor=white)](https://nativecode.jakubhecht.sk)
+[![Version](https://img.shields.io/badge/Version-2.0%20Beta-4F46E5?style=flat)](https://nativecode.jakubhecht.sk)
 [![Price](https://img.shields.io/badge/price-free-brightgreen?style=flat)](https://nativecode.jakubhecht.sk)
 
-[**Website**](https://nativecode.jakubhecht.sk) · [**Download**](https://nativecode.jakubhecht.sk) · [**Report a bug**](https://github.com/heyitsjakub/NativeCode/issues/new/choose)
-
-<img src="https://nativecode.jakubhecht.sk/assets/screenshot.png" alt="NativeCode screenshot" width="800">
+[**Website**](https://nativecode.jakubhecht.sk) · [**Download Beta**](https://nativecode.jakubhecht.sk) · [**Report a bug**](https://github.com/heyitsjakub/NativeCode/issues/new/choose)
 
 </div>
+
+---
+
+## NativeCode 2.0 Beta
+
+**NativeCode 2.0 Beta is now available for macOS.**
+
+The biggest NativeCode release yet introduces a completely redesigned workspace, OpenAI-compatible and local AI backends, a more capable coding agent, and a modern cross-platform architecture.
+
+**Windows support with the same 2.0 interface is coming soon.**
+
+Download the beta from the website and help shape the next generation of NativeCode by reporting bugs and sharing feedback.
 
 ---
 
@@ -24,21 +35,9 @@
 
 NativeCode is a native AI-powered coding IDE for **macOS** and **Windows**.
 
-It is built with **SwiftUI** on macOS and **WinUI 3** on Windows, rather than Electron or another cross-platform web wrapper. NativeCode includes an AI coding agent that can read, edit, and search project files, as well as run approved terminal commands.
-
 It supports local AI models and OpenAI-compatible remote servers. When using local models, your projects and code remain on your device.
 
 More information, downloads, documentation, and release details are available on the [NativeCode website](https://nativecode.jakubhecht.sk).
-
-## NativeCode 2.0
-
-**NativeCode 2.0 is currently in development.**
-
-The next generation of NativeCode is moving to a shared web wrapper inside the desktop app, designed to support multiple platforms and make future development easier.
-
-More details will be announced on the [NativeCode website](https://nativecode.jakubhecht.sk/#nativecode-2).
-
-Current downloads remain on version 1.x.
 
 ## Report a bug
 
@@ -48,12 +47,12 @@ Found a problem with NativeCode?
 
 Please include:
 
-* NativeCode version
-* macOS or Windows version
-* Device specifications
-* Selected AI model and backend
-* Steps to reproduce the problem
-* Screenshots or error messages, when available
+- NativeCode version
+- macOS or Windows version
+- Device specifications
+- Selected AI model and backend
+- Steps to reproduce the problem
+- Screenshots or error messages, when available
 
 This repository is used for reporting and tracking NativeCode bugs. The NativeCode source code is not publicly available.
 
@@ -61,6 +60,6 @@ This repository is used for reporting and tracking NativeCode bugs. The NativeCo
 
 <div align="center">
 
-**Built in Slovakia · Made for Mac & Windows**
+**NativeCode 2.0 Beta is available now for macOS · Windows support coming soon**
 
 </div>
